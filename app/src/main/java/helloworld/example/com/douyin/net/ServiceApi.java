@@ -1,6 +1,7 @@
 package helloworld.example.com.douyin.net;
 
 import helloworld.example.com.douyin.banner.BannersBean;
+import helloworld.example.com.douyin.recommend.RecomBean;
 import helloworld.example.com.douyin.search.SearchBean;
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
@@ -18,5 +19,9 @@ public interface ServiceApi {
     //轮播图  http://api.amemv.com/aweme/v1/find/?aid=1128
     @GET("aweme/v1/find/?aid=1128")
     Flowable<BannersBean> bannersBean();
+
+    //推荐   http://api.amemv.com/aweme/v1/category/list/?cursor=0&count=6
+    @GET("aweme/v1/category/list/?cursor=0&count=6")
+    Flowable<RecomBean> recomBean();
 
 }

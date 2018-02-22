@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_sel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/tubiao"
+            android:layout_width="50px"
+            fresco:roundAsCircle="true"
+            android:layout_height="50px"
+            android:background="@mipmap/ic_launcher"
+            android:layout_gravity="center_vertical"/>
+        <LinearLayout
+            android:layout_marginLeft="20px"
+            android:orientation="vertical"
+            android:layout_width="330px"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/nick"
+                android:textSize="19sp"
+                android:textColor="@color/colorDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/qianming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDark"/>
+
+        </LinearLayout>
+        <TextView
+            android:text="1234"
+            android:textColor="#fff"
+            android:id="@+id/usercount"
+            android:layout_marginLeft="200px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/users"
+            android:layout_width="80px"
+            android:layout_height="40px" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sim_ll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

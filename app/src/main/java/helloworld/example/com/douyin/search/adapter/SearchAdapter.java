@@ -37,7 +37,14 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
        // SearchBean.DataBean.ChallengeBean challenge = list.get(position).getChallenge();
         //SearchBean.DataBean.MusicBean music = list.get(position).getMusic();
-        myViewHolder.tv_resou.setText(list.get(position).getChallenge().getCha_name());
+        if (position!=1){
+            SearchBean.DataBean.ChallengeBean challenge = list.get(position).getChallenge();
+            myViewHolder.tv_resou.setText(challenge.getCha_name());
+        }else if (position == 1){
+            SearchBean.DataBean.MusicBean music = list.get(position).getMusic();
+            myViewHolder.tv_resou.setText(music.getTitle());
+        }
+
     }
 
     @Override

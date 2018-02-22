@@ -5,18 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorBlack"
     tools:context="helloworld.example.com.douyin.SecondActivity">
 
     <include layout="@layout/title"></include>
 
+
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorDark"
             android:text="热搜内容"/>
     </LinearLayout>
 
@@ -24,12 +28,45 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rsRV"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark">
     </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorDark"
+            android:textSize="15sp"
+            android:text="//发现更多//"/>
+
+    </LinearLayout>
+
 
     <com.youth.banner.Banner
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.youth.banner.Banner>
+        android:layout_height="200dp"></com.youth.banner.Banner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gzRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
